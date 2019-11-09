@@ -2,7 +2,7 @@
 
 
 <div class="container-wrapper">
-    <div class="container">
+    <div class="login-container">
         <div id="login-box">
 
             <h2>Login with Username and Password</h2>

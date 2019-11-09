@@ -12,10 +12,8 @@
 }
 
 .table {
-	width:100%;
     table-layout: fixed;
     overflow: auto;
-    border: 1px black;
 }
 
 .table th {

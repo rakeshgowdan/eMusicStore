@@ -2,6 +2,17 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@include file="/WEB-INF/views/template/header.jsp"%>
 
+<script>
+    $(document).ready(function(){
+        var searchCondition = '${searchCondition}';
+
+        $('.table').DataTable({
+            "lengthMenu": [[1,2,3,5,10,-1], [1,2,3,5,10, "All"]],
+            "oSearch": {"sSearch": searchCondition}
+        });
+    });
+
+</script>
 
 <div class="container-wrapper">
     <div class="container">
@@ -29,8 +40,8 @@
                     <td>${product.productName}</td>
                     <td>${product.productCategory}</td>
                     <td>${product.productCondition}</td>
-                    <td>${product.productPrice} INR</td>
-                    <td><a href="<spring:url value="/productList/viewProduct/${product.productId}" />"
+                    <td>${product.productPrice} USD</td>
+                    <td><a href="<spring:url value="/product/viewProduct/${product.productId}" />"
                     ><span class="glyphicon glyphicon-info-sign"></span></a></td>
                 </tr>
             </c:forEach>
